@@ -1,0 +1,54 @@
+    """
+    manage.py启动命令：
+        - 单线程：
+            python manage.py runserver -p 8001 -d -r
+        - 多线程：
+            python manage.py runserver -p 8001 -d -r --threaded
+    启动参数：
+        shell :使用shell脚本启动
+        runserver  ：命令启动
+        runserver参数：
+            主要参数：
+                -h  : 服务器IP
+                -p  ：服务端口
+                -r  ：自动重新加载（用于debug模式，不安全）
+                --threaded  ：多线程启动
+            全部参数：
+                -h HOST, --host HOST
+                -p PORT, --port PORT
+                --threaded
+                --processes PROCESSES
+                --passthrough-errors
+                -d, --debug           enable the Werkzeug debugger (DO NOT use in production
+                                        code)
+                -D, --no-debug        disable the Werkzeug debugger
+                -r, --reload          monitor Python files for changes (not 100% safe for
+                                        production use)
+                -R, --no-reload       do not monitor Python files for changes
+                --ssl-crt SSL_CRT     Path to ssl certificate
+                --ssl-key SSL_KEY     Path to ssl key
+    """
+
+    """
+    操作数据库命令：
+        - 初始化：
+            python manage.py db init
+        - 生成迁移文件：
+            python manage.py db migrate
+        - 创建数据库：
+            python manage.py db upgrade
+    """
+
+    """
+    sqlite URI格式 --- sqlite:///数据库位置
+    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///sqlite.db"
+    其他数据库URI格式（适用于其他所有类型数据库如：MySQL，Oracle） --- 数据库+驱动://用户名:密码@主机:端口/数据库名
+    app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql:root:root@localhost:3306/FlaskDemoDB"
+    SQLAlchemy未来版本可能会添加一个默认为False的SQLALCHEMY_TRACK_MODIFICATIONS参数，官方建议在当前程序中配置此参数以提高兼容性，如果不配置此参数，将会给出warning信息
+    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+    """
+
+    """
+    懒加载，即延迟加载。
+    使用懒加载的原因：解决导包时出现的循环调用问题
+    """
