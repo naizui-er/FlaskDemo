@@ -32,21 +32,23 @@ FlaskDemo关系图：
 ![FlaskDemo关系图](FlaskDemo结构图.png)
 
 
-###环境要求：
-python 3.6
-mysql 5.5
+环境要求：
+python 3.6  
+mysql 5.5  
 
-###安装环境
-#####**Windows下：**
-        1.启动cmd窗口
-        2.将目录切换到FlaskDemo下
-#####使用conda进行安装
+安装环境  
+Windows下：     
+        1.启动cmd窗口  
+        2.将目录切换到FlaskDemo下  
+
+使用conda进行安装
+
 conda安装命令：
 ```angular2html
 conda install --yes --file conda-requirements.txt
 ```
 
-#####使用pip进行安装
+使用pip进行安装
 ```angular2html
 pip install -r pip-requirements.txt
 ```
@@ -55,7 +57,7 @@ pip install -r pip-requirements.txt
 （如果conda使用的是清华源，可能Flask相关的模块会找不到）
 
 
-###项目初始化
+项目初始化
 
 1.修改配置文件  
 在FlaskDemo/App/config.py中修改对应开发环境的数据库配置  
@@ -89,7 +91,7 @@ python manage.py runserver --threaded
 如果在浏览器中输入前面你设置的ip：port，浏览器显示 Hello world!  表示运行成功。
 
 
-####最后  
+最后  
 
 源码中有十分详细的注释，在FlaskDemo/note.txt中还有对整个项目需要注意的地方以及个人感觉比较重要的笔记和使用方法  
 
